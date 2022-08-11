@@ -12,9 +12,9 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    left: -50px;
+    left: -65px;
     transform: translate(10px, 0);
-    background-color: #bfbfbf;
+    background-color: rgba(0, 140, 255, 0.493);
     height: 30px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     border-radius: 20px 0 0 20px;
@@ -28,17 +28,20 @@
     opacity: 1;
     visibility: visible;
     transform: translate(-20px, 0);
-    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
 }
 .popover_content::before{
     position: absolute;
     z-index: -1;
     content: "";
-    right: -20px;
-    translate: (0,40px);
-    border-width: 10px 10px 10px 10px;
+    right: -31px;
+    translate: (40px,0);
+    border-width: 20px 16px 10px 16px;
     rotate: 90deg;
-    border-color: transparent transparent #bfbfbf transparent;
+    border-color: transparent transparent rgba(0, 140, 255, 0.493) transparent;
     transition-duration: 0.3s;
     transition-property: transform;
+}
+.active{
+    fill: #2563eb;
 }
