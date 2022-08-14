@@ -90,11 +90,51 @@ new SimpleBar(document.getElementById('aboutPage'), {
 });
 
 
+// $(document).ready(function(){
+//     $(".owl-carousel").owlCarousel({
+//         margin: 10,
+//         autoWidth: false,
+//         nav: true,
+//         dots: false,
+//         navText: [
+//             "<",">"
+//         ],
+//         responsive: {
+//             0: {
+//                 items: 2
+//             }
+//         }
+//     });
+// });
+
+
+// $(document).ready(function(){
+//     $(".owl-mine").owlCarousel({
+//         margin: 10,
+//         autoWidth: false,
+//         items: 5,
+//         nav: true,
+//         dots: false,
+//         navText: [
+//             "<",">"
+//         ],
+//         responsive: {
+//             0: {
+//                 items: 5
+//             }
+//         }
+//     });
+// });
+
+
 $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
+    
+    var one = $('#one');
+    var two = $('#two');
+    one.owlCarousel({
         margin: 10,
-        items: 2,
         autoWidth: false,
+        items: 5,
         nav: true,
         dots: false,
         navText: [
@@ -106,8 +146,22 @@ $(document).ready(function(){
             }
         }
     });
-});
-
+    two.owlCarousel({
+        margin: 10,
+        autoWidth: false,
+        items: 5,
+        nav: true,
+        dots: false,
+        navText: [
+            "<",">"
+        ],
+        responsive: {
+            0: {
+                items: 5
+            }
+        }
+    });
+})
 
 particlesJS.load('particles-js', 'particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
