@@ -16,6 +16,8 @@ const resumeBut = document.querySelector('#resumeBut');
 const portoBut = document.querySelector('#portoBut');
 const blogBut = document.querySelector('#blogBut');
 const contactBut = document.querySelector('#contactBut');
+const nextIcon = '<img src="./images/next.png" alt="next-arrow">';
+const prevIcon = '<img src="./images/back.png" alt="back-arrow">';
 
 var page = [homePage, aboutPage, resumePage, blogPage, portoPage, contactPage];
 var button = [homeBut, aboutBut, resumeBut, blogBut, portoBut, contactBut];
@@ -85,4 +87,28 @@ function checkButton(buttons){
 
 new SimpleBar(document.getElementById('aboutPage'), {
     scrollbarMinSize: 50
+});
+
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        margin: 10,
+        items: 2,
+        autoWidth: false,
+        nav: true,
+        dots: false,
+        navText: [
+            "<",">"
+        ],
+        responsive: {
+            0: {
+                items: 2
+            }
+        }
+    });
+});
+
+
+particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
 });
